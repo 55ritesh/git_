@@ -55,8 +55,22 @@ public class Student{
     public static List<Integer> findMarks(Student s1,Student s2){
         List<Integer> m1 = new ArrayList<>(s1.getMarks());
         List<Integer> m2 = new ArrayList<>(s2.getMarks());
+        List<Integer> m3 = new ArrayList<>();
 
+
+        for(Integer it:m1){
+            if(m2.contains(it)){
+                m3.add(it);
+            }
+        }
+        return m3;
+
+        /*
         m1.retainAll(m2);
         return m1;
+
+         */
+
+
     }
 }
